@@ -23,13 +23,11 @@ img {
 }
 
 nav ul {
-  display: flex;
   list-style: none;
   gap: 20px;
 }
 
 .button-nav {
-  display: flex;
   gap: 20px;
 }
 
