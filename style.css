@@ -23,11 +23,13 @@ img {
 }
 
 nav ul {
+  display: flex;
   list-style: none;
   gap: 20px;
 }
 
 .button-nav {
+  display: flex;
   gap: 20px;
 }
 
@@ -53,6 +55,27 @@ button:hover {
     "main side";
   gap: 40px;
   margin: 4%;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  position: sticky;
+  top: 0px;
+  background-color: rgb(50, 50, 50);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+li {
+  padding: 6px;
 }
 
 .grid-tweet {
@@ -85,27 +108,6 @@ button:hover {
 
 .tweet-content {
   flex: 1;
-}
-
-main {
-  grid-area: main;
-}
-
-aside {
-  grid-area: aside;
-  position: sticky;
-  top: 0px;
-  background-color: rgb(50, 50, 50);
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-aside ul {
-  list-style: none;
-}
-
-li {
-  padding: 6px;
 }
 
 @media screen and (max-width: 910px) {
