@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  background: rgb(111, 111, 111);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(27, 27, 48);
+  padding-inline: 1rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+img {
+  width: 80px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.button-nav {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: #74bfc2;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0e9296;
+  transition: all 0.3s ease;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "main aside"
+    "main side";
+  gap: 40px;
+  margin: 4%;
+}
+
+.grid-tweet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-tweet .tweet:nth-child(3n) {
+  grid-column: span 2;
+}
+
+.tweet {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(70, 70, 70);
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tweet-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.tweet-content {
+  flex: 1;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  position: sticky;
+  top: 0px;
+  background-color: rgb(50, 50, 50);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+li {
+  padding: 6px;
+}
+
+@media screen and (max-width: 910px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aside"
+      "main";
+    gap: 0;
+  }
+
+  .grid-tweet {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-tweet .tweet:nth-child(3n) {
+    grid-column: span 1;
+  }
+
+  .tweet-profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tweet-content {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav img {
+    order: -1;
+  }
+
+  nav button {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .grid {
+    margin: 0;
+  }
+}
